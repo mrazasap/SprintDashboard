@@ -10,5 +10,8 @@
     "node-dashing-js": "~1.0.3",
     "request": "^2.79.0"
   },
-  "engine": "node >= 0.10"
+  "engine": "node >= 0.10",
+  "scripts": {
+    "run" : "dashing-js start"
+  }
 }
