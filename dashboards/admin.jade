@@ -1,0 +1,85 @@
+extends layout
+
+block title
+  | Admin
+
+block content
+  div.gridster
+    div.content
+      form(action='', method='post')
+        div.content-block
+          h3 Sprint Status
+          .form__field
+            label Sprint Name
+            input(type='text', name='sprintName', value='#{result.sprintName}')
+          .form__field
+            label Sprint Health
+            input(type='radio', name='sprintHealth', value='good', checked=result.sprintHealth=='good')
+            span Good
+            input(type='radio', name='sprintHealth', value='average', checked=result.sprintHealth=='average')
+            span Average
+            input(type='radio', name='sprintHealth', value='bad', checked=result.sprintHealth=='bad')
+            span Bad
+          div
+            h4 Number of Stories
+            .form__field
+              label Commited
+              input(type='text', name='storyNumCommitted', value='#{result.storyNumCommitted}')
+            .form__field
+              label Achieved
+              input(type='text', name='storyNumAchieved', value='#{result.storyNumAchieved}')
+          div
+            h4 Story Points
+            .form__field
+              label Commited
+              input(type='text', name='storyPointCommitted', value='#{result.storyPointCommitted}')
+            .form__field
+              label Achieved
+              input(type='text', name='storyPointAchieved', value='#{result.storyPointAchieved}')
+        div.content-block
+          h3 Quality Footprint
+          div
+            .form__field
+              label Sonar Voilations Introduced
+              input(type='text', name='sonarVoilationRaised', value='#{result.sonarVoilationRaised}')
+            .form__field
+              label Sonar Voilations Fixed (AEM)
+              input(type='text', name='sonarVoilationFixedWcs', value='#{result.sonarVoilationFixedWcs}')
+            .form__field
+              label Sonar Voilations Fixed (WCS)
+              input(type='text', name='sonarVoilationFixedAem', value='#{result.sonarVoilationFixedAem}')
+          .form__field
+            label Defect Leakage
+            input(type='text', name='defectLeakage', value='#{result.defectLeakage}')
+          .form__field
+            label Unit test coverage WCS
+            input(type='text', name='unitTestCoverageWcs', value='#{result.unitTestCoverageWcs}')
+          .form__field
+            label Unit test coverage FE
+            input(type='text', name='unitTestCoverageFe', value='#{result.unitTestCoverageFe}')
+
+        div.content-block
+          h3 KPI
+            for item,i in result.kpiProjected
+              div.kpi-content
+                .form__field
+                  label Projected
+                  textarea(name='kpiProjected[]') #{item}
+                .form__field
+                  label Realized
+                  textarea(name='kpiRealized[]') #{result.kpiRealized[i]}
+                .form__field
+                  input.btn(type='button', id='deleteKpi-#{i}', value='Delete')
+
+            div.kpi-cta
+              .form__field
+                input.btn(type='button', id='addKpi', value='Add')
+        div
+          .form__field.cta
+            input.btn(type='submit', name='submitForm', value='Submit')
+            input.btn(type='reset', name='resetForm', value='Reset')
+
+      div.message
+        div
+          p.success.hidden Data has been successfully saved.
+          p.error.hidden There is some error saving data.

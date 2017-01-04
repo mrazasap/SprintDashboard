@@ -1,0 +1,57 @@
+extends layout
+
+block title
+  | Sprint dashboard
+
+block content
+  div.gridster
+    ul
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='sprintName', data-view='Text', data-title='')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='sprintHealth', data-view='Emoticons')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='storyNumCommitted', data-view='Number', data-title='Stories Committed', style='background-color:#9c4274')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='storyNumAchieved', data-view='Meter', data-title='Stories Achieved')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='storyPointCommitted', data-view='Number', data-title='Points Committed', style='background-color:#9c4274')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='storyPointAchieved', data-view='Meter', data-title='Points Achieved')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='sonarVoilationRaised', data-view='Number', data-title='Sonar Voilations Introduced')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='sonarVoilationFixedWcs', data-view='Number', data-title='Sonar Voilations Fixed (Wcs)')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='sonarVoilationFixedAem', data-view='Number', data-title='Sonar Voilations Fixed (Aem)')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='defectLeakage', data-view='Number', data-title='Defect Leakage')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='unitTestCoverageWcs', data-view='Number', data-title='Unit Test Coverage (Wcs)', data-suffix="%")
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='unitTestCoverageFe', data-view='Number', data-title='Unit Test Coverage (FE)', data-suffix="%")
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='1')
+        div(data-id='kpiProjected', data-view='Text', data-title='KPI Projected')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='1')
+        div(data-id='kpiRealized', data-view='Text', data-title='KPI Realized')

@@ -1,0 +1,85 @@
+<form action="" method="post">
+  <div>
+    <h3>Sprint Status</h3>
+    <div class="form__field">
+      <label>Sprint Name</label>
+      <input type="text" name="sprintName" data-bind="sprintName"/>
+    </div>
+    <div class="form__field">
+      <label>Sprint Health</label>
+      <input type="radio" name="sprintHealth" value="good" data-bind="sprintHealth"/><span>Good</span>
+      <input type="radio" name="sprintHealth" value="average" data-bind="sprintHealth"/><span>Average</span>
+      <input type="radio" name="sprintHealth" value="bad" data-bind="sprintHealth"/><span>Bad</span>
+    </div>
+    <div>
+      <h4>Number of Stories</h4>
+      <div class="form__field">
+        <label>Commited</label>
+        <input type="text" name="storyNumCommitted" data-bind="storyNumCommitted"/>
+      </div>
+      <div class="form__field">
+        <label>Achieved</label>
+        <input type="text" name="storyNumAchieved" data-bind="storyNumAchieved"/>
+      </div>
+    </div>
+    <div>
+      <h4>Story Points</h4>
+      <div class="form__field">
+        <label>Commited</label>
+        <input type="text" name="storyPointCommitted" data-bind="storyPointCommitted"/>
+      </div>
+      <div class="form__field">
+        <label>Achieved</label>
+        <input type="text" name="storyPointAchieved" data-bind="storyPointAchieved"/>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>Quality Footprint</h3>
+    <div>
+      <div class="form__field">
+        <label>Sonar Voilations Introduced</label>
+        <input type="text" name="sonarVoilationRaised" data-bind="sonarVoilationRaised"/>
+      </div>
+      <div class="form__field">
+        <label>Sonar Voilations Fixed (AEM)</label>
+        <input type="text" name="sonarVoilationFixedWcs" data-bind="sonarVoilationFixedWcs"/>
+      </div>
+      <div class="form__field">
+        <label>Sonar Voilations Fixed (WCS)</label>
+        <input type="text" name="sonarVoilationFixedAem" data-bind="sonarVoilationFixedAem"/>
+      </div>
+    </div>
+    <div class="form__field">
+      <label>Unit test coverage</label>
+      <input type="text" name="unitTestCoverage" data-bind="unitTestCoverage"/>
+    </div>
+    <div class="form__field">
+      <label>Defect Leakage</label>
+      <input type="text" name="defectLeakage" data-bind="defectLeakage"/>
+    </div>
+  </div>
+  <div>
+    <h3>KPI</h3>
+    <div>
+      <div class="form__field">
+        <label>Projected</label>
+        <textarea name="kpiProjected" data-bind="kpiProjected"></textarea>
+      </div>
+      <div class="form__field">
+        <label>Realized</label>
+        <textarea name="kpiRealized" data-bind="kpiRealized"></textarea>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="form__field">
+      <input type="submit" name="submitForm" value="Submit" class="btn"/>
+      <input type="reset" name="resetForm" value="Reset" class="btn"/>
+    </div>
+  </div>
+</form>
+<script type="text/javascript">
+  console.log("execute", $("body"));
+  widget_loaded();
+</script>

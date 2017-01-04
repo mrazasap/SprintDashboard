@@ -1,0 +1,14 @@
+{
+  "name": "node-project",
+  "description": "node-project",
+  "author": "<Put your name here>",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoskin": "^2.1.0",
+    "node-dashing-js": "~1.0.3",
+    "request": "^2.79.0"
+  },
+  "engine": "node >= 0.10"
+}
