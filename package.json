@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.14.0",
+    "mongodb": "^2.2.19",
     "mongoskin": "^2.1.0",
     "node-dashing-js": "git+https://git@github.com/mrazasap/nuvo-dashing-js.git",
     "request": "^2.79.0"
