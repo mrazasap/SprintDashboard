@@ -60,20 +60,31 @@ block content
 
         div.content-block
           h3 KPI
-            for item,i in result.kpiProjected
-              div.kpi-content
+            if result.kpiProjected !== undefined
+              for item,i in result.kpiProjected
+                div(class='kpi-content')
+                  .form__field
+                    label Projected
+                    textarea(name='kpiProjected[]') #{item}
+                  .form__field
+                    label Realized
+                    textarea(name='kpiRealized[]') #{result.kpiRealized[i]}
+                  .form__field
+                    input.btn(type='button', class="delete-kpi" value='Delete')
+            else
+              div(class='kpi-content')
                 .form__field
                   label Projected
-                  textarea(name='kpiProjected[]') #{item}
+                  textarea(name='kpiProjected[]')
                 .form__field
                   label Realized
-                  textarea(name='kpiRealized[]') #{result.kpiRealized[i]}
+                  textarea(name='kpiRealized[]')
                 .form__field
-                  input.btn(type='button', id='deleteKpi-#{i}', value='Delete')
+                  input.btn(type='button', class="delete-kpi" value='Delete')
 
             div.kpi-cta
               .form__field
-                input.btn(type='button', id='addKpi', value='Add')
+                input.btn(type='button', class='add-kpi', value='Add')
         div
           .form__field.cta
             input.btn(type='submit', name='submitForm', value='Submit')

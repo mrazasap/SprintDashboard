@@ -16,10 +16,17 @@ $(function() {
 		return false;
 	});
 
-	var kpiContentLength = $(".kpi-content")[0].length;
+	$(".add-kpi").on("click", function () {
+		var lastContent = $(".kpi-content:last"),
+			newContent = lastContent.clone(true);
 
-	$("#addKpi").on("click", function () {
-		var kpiContent = $(".kpi-content:last").clone();
-		$(".kpi-content:last").after(kpiContent);
+		lastContent.after(newContent);
+	});
+
+	$(".delete-kpi").on("click", function () {
+		if ($(".delete-kpi").length === 1)  {
+			return false;
+		}
+		$(this).closest(".kpi-content").remove();
 	});
 });

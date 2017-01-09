@@ -358,3 +358,35 @@ h3 {
   display: none;
 }
 
+.kpi-table {
+  background-color: #96bf48 !important;
+}
+
+.kpi-table tr {
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+.kpi-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.kpi-table th, .kpi-table td, .kpi-table tr {
+  background: none !important;
+}
+
+.kpi-table th, .kpi-table td {
+  width: 50%;
+  height: 100px;
+  padding: 20px;
+}
+
+.kpi-table th {
+  height: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.kpi-table tr th:first-child, .kpi-table tr td:first-child {
+  border-right: 1px dashed #C0C0C0;
+}
