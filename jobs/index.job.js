@@ -1,22 +1,23 @@
 var request = require('request');
 
 // TODO: group the events based on data map
-// var dataItems = {
-// 	sprintName : '',
-// 	sprintHealth : '',
-// 	storyNumCommitted : '',
-// 	storyNumAchieved : '',
-// 	storyPointCommitted : '',
-// 	storyPointAchieved : '',
-// 	sonarVoilationRaised : '',
-// 	sonarVoilationFixedAem : '',
-// 	sonarVoilationFixedWcs : '',
-// 	unitTestCoverageWcs : '',
-// 	unitTestCoverageFe : '',
-// 	defectLeakage : '',
-// 	kpiProjected : [],
-// 	kpiRealized : []
-// };
+
+var dataItems = {
+	sprintName : '',
+	sprintHealth : '',
+	storyNumCommitted : '',
+	storyNumAchieved : '',
+	storyPointCommitted : '',
+	storyPointAchieved : '',
+	sonarVoilationRaised : '',
+	sonarVoilationFixedAem : '',
+	sonarVoilationFixedWcs : '',
+	unitTestCoverageWcs : '',
+	unitTestCoverageFe : '',
+	defectLeakage : '',
+	kpiProjected : [],
+	kpiRealized : []
+};
 
 setInterval(function () {
 	request('http://localhost:3030/api/read', function (error, response, body) {

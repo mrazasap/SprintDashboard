@@ -28,7 +28,7 @@ router.get('/admin', function (req, res, next) {
 	  var templateVars = {
 		dashboard: 'dashboard',
 		request: req,
-		result: JSON.parse(body).reverse()[0]
+		result: JSON.parse(body).reverse()[0] || {}
       };
       res.render(dashboard, templateVars);
 	});
