@@ -3,6 +3,22 @@ var router = express.Router();
 var mongo = require('mongoskin');
 var request = require('request');
 var db;
+var dataItems = {
+	sprintName : '',
+	sprintHealth : '',
+	storyNumCommitted : '',
+	storyNumAchieved : '',
+	storyPointCommitted : '',
+	storyPointAchieved : '',
+	sonarVoilationRaised : '',
+	sonarVoilationFixedAem : '',
+	sonarVoilationFixedWcs : '',
+	unitTestCoverageWcs : '',
+	unitTestCoverageFe : '',
+	defectLeakage : '',
+	kpiProjected : [],
+	kpiRealized : []
+};
 
 connect();
 
@@ -28,7 +44,7 @@ router.get('/admin', function (req, res, next) {
 	  var templateVars = {
 		dashboard: 'dashboard',
 		request: req,
-		result: JSON.parse(body).reverse()[0] || {}
+		result: JSON.parse(body).reverse()[0] || dataItems
       };
       res.render(dashboard, templateVars);
 	});
