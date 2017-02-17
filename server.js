@@ -12,7 +12,7 @@ dashing.protected = function(req, res, next) {
 */
 
 // Set your default dashboard here
-//dashing.default_dashboard = 'mydashboard';
+dashing.default_dashboard = 'index';
 
 // dashing.app.use(function(req, res) {
 // 	console.log("req.url", req.url);
